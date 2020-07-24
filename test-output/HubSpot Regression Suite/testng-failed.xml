@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="3" guice-stage="DEVELOPMENT" name="Failed suite [HubSpot Regression Suite]" parallel="tests">
+  <parameter name="browser" value="chrome"/>
+  <test name="HubSpot Functional Regression Test -- firefox(failed)" parallel="classes">
+    <parameter name="browser" value="firefox"/>
+    <classes>
+      <class name="com.qa.hubspot.tests.LoginPageTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="loginTest"/>
+        </methods>
+      </class> <!-- com.qa.hubspot.tests.LoginPageTest -->
+      <class name="com.qa.hubspot.tests.HomePageTest">
+        <methods>
+          <include name="verifyUserAccountName"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="verifyHomePageTitle"/>
+          <include name="verifyHomePageHeader"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.qa.hubspot.tests.HomePageTest -->
+    </classes>
+  </test> <!-- HubSpot Functional Regression Test - firefox(failed) -->
+  <test name="HubSpot Functional Regression Test -- chrome(failed)" parallel="classes">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="com.qa.hubspot.tests.LoginPageTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="verifySignUpLink"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.qa.hubspot.tests.LoginPageTest -->
+      <class name="com.qa.hubspot.tests.HomePageTest">
+        <methods>
+          <include name="verifyUserAccountName"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="verifyHomePageTitle"/>
+          <include name="verifyHomePageHeader"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.qa.hubspot.tests.HomePageTest -->
+    </classes>
+  </test> <!-- HubSpot Functional Regression Test - chrome(failed) -->
+</suite> <!-- Failed suite [HubSpot Regression Suite] -->
